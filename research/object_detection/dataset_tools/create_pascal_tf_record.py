@@ -165,6 +165,8 @@ def main(_):
     examples_path = os.path.join(data_dir, year, 'ImageSets', 'Main',
                                  'aeroplane_' + FLAGS.set + '.txt')
     annotations_dir = os.path.join(data_dir, year, FLAGS.annotations_dir)
+    
+    # To Do: loop over all classes of objects
     examples_list = dataset_util.read_examples_list(examples_path)
     for idx, example in enumerate(examples_list):
       if idx % 100 == 0:
