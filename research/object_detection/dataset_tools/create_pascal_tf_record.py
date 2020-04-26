@@ -54,7 +54,7 @@ flags.DEFINE_boolean('ignore_difficult_instances', False, 'Whether to ignore '
 FLAGS = flags.FLAGS
 
 SETS = ['train', 'val', 'trainval', 'test']
-YEARS = ['VOC2007', 'VOC2012', 'merged']
+YEARS = ['VOC2007', 'VOC2009', 'VOC2012', 'merged']
 
 
 def dict_to_tf_example(data,
@@ -152,7 +152,7 @@ def main(_):
     raise ValueError('year must be in : {}'.format(YEARS))
 
   data_dir = FLAGS.data_dir
-  years = ['VOC2007', 'VOC2012']
+  years = ['VOC2007', 'VOC2009', 'VOC2012']
   if FLAGS.year != 'merged':
     years = [FLAGS.year]
 
